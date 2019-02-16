@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C33D878E22185CCE00F1C02B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D878D22185CCE00F1C02B /* AppDelegate.swift */; };
+		C33D879022185CCE00F1C02B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D878F22185CCE00F1C02B /* ViewController.swift */; };
+		C33D879322185CCE00F1C02B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33D879122185CCE00F1C02B /* Main.storyboard */; };
+		C33D879522185CD000F1C02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C33D879422185CD000F1C02B /* Assets.xcassets */; };
+		C33D879822185CD000F1C02B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33D879622185CD000F1C02B /* LaunchScreen.storyboard */; };
+		C33D87A322185CD000F1C02B /* RDiddysPaintStudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D87A222185CD000F1C02B /* RDiddysPaintStudioTests.swift */; };
+		C33D87AE22185CD100F1C02B /* RDiddysPaintStudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D87AD22185CD100F1C02B /* RDiddysPaintStudioUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C33D879F22185CD000F1C02B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C33D878222185CCE00F1C02B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C33D878922185CCE00F1C02B;
+			remoteInfo = RDiddysPaintStudio;
+		};
+		C33D87AA22185CD100F1C02B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C33D878222185CCE00F1C02B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C33D878922185CCE00F1C02B;
+			remoteInfo = RDiddysPaintStudio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C33D878A22185CCE00F1C02B /* RDiddysPaintStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RDiddysPaintStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33D878D22185CCE00F1C02B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C33D878F22185CCE00F1C02B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C33D879222185CCE00F1C02B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C33D879422185CD000F1C02B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C33D879722185CD000F1C02B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C33D879922185CD000F1C02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C33D879E22185CD000F1C02B /* RDiddysPaintStudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RDiddysPaintStudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33D87A222185CD000F1C02B /* RDiddysPaintStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDiddysPaintStudioTests.swift; sourceTree = "<group>"; };
+		C33D87A422185CD100F1C02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C33D87A922185CD100F1C02B /* RDiddysPaintStudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RDiddysPaintStudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33D87AD22185CD100F1C02B /* RDiddysPaintStudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDiddysPaintStudioUITests.swift; sourceTree = "<group>"; };
+		C33D87AF22185CD100F1C02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C33D878722185CCE00F1C02B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C33D879B22185CD000F1C02B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C33D87A622185CD100F1C02B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C33D878122185CCE00F1C02B = {
+			isa = PBXGroup;
+			children = (
+				C33D878C22185CCE00F1C02B /* RDiddysPaintStudio */,
+				C33D87A122185CD000F1C02B /* RDiddysPaintStudioTests */,
+				C33D87AC22185CD100F1C02B /* RDiddysPaintStudioUITests */,
+				C33D878B22185CCE00F1C02B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C33D878B22185CCE00F1C02B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C33D878A22185CCE00F1C02B /* RDiddysPaintStudio.app */,
+				C33D879E22185CD000F1C02B /* RDiddysPaintStudioTests.xctest */,
+				C33D87A922185CD100F1C02B /* RDiddysPaintStudioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C33D878C22185CCE00F1C02B /* RDiddysPaintStudio */ = {
+			isa = PBXGroup;
+			children = (
+				C33D878D22185CCE00F1C02B /* AppDelegate.swift */,
+				C33D878F22185CCE00F1C02B /* ViewController.swift */,
+				C33D879122185CCE00F1C02B /* Main.storyboard */,
+				C33D879422185CD000F1C02B /* Assets.xcassets */,
+				C33D879622185CD000F1C02B /* LaunchScreen.storyboard */,
+				C33D879922185CD000F1C02B /* Info.plist */,
+			);
+			path = RDiddysPaintStudio;
+			sourceTree = "<group>";
+		};
+		C33D87A122185CD000F1C02B /* RDiddysPaintStudioTests */ = {
+			isa = PBXGroup;
+			children = (
+				C33D87A222185CD000F1C02B /* RDiddysPaintStudioTests.swift */,
+				C33D87A422185CD100F1C02B /* Info.plist */,
+			);
+			path = RDiddysPaintStudioTests;
+			sourceTree = "<group>";
+		};
+		C33D87AC22185CD100F1C02B /* RDiddysPaintStudioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C33D87AD22185CD100F1C02B /* RDiddysPaintStudioUITests.swift */,
+				C33D87AF22185CD100F1C02B /* Info.plist */,
+			);
+			path = RDiddysPaintStudioUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C33D878922185CCE00F1C02B /* RDiddysPaintStudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C33D87B222185CD100F1C02B /* Build configuration list for PBXNativeTarget "RDiddysPaintStudio" */;
+			buildPhases = (
+				C33D878622185CCE00F1C02B /* Sources */,
+				C33D878722185CCE00F1C02B /* Frameworks */,
+				C33D878822185CCE00F1C02B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RDiddysPaintStudio;
+			productName = RDiddysPaintStudio;
+			productReference = C33D878A22185CCE00F1C02B /* RDiddysPaintStudio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C33D879D22185CD000F1C02B /* RDiddysPaintStudioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C33D87B522185CD100F1C02B /* Build configuration list for PBXNativeTarget "RDiddysPaintStudioTests" */;
+			buildPhases = (
+				C33D879A22185CD000F1C02B /* Sources */,
+				C33D879B22185CD000F1C02B /* Frameworks */,
+				C33D879C22185CD000F1C02B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C33D87A022185CD000F1C02B /* PBXTargetDependency */,
+			);
+			name = RDiddysPaintStudioTests;
+			productName = RDiddysPaintStudioTests;
+			productReference = C33D879E22185CD000F1C02B /* RDiddysPaintStudioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C33D87A822185CD100F1C02B /* RDiddysPaintStudioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C33D87B822185CD100F1C02B /* Build configuration list for PBXNativeTarget "RDiddysPaintStudioUITests" */;
+			buildPhases = (
+				C33D87A522185CD100F1C02B /* Sources */,
+				C33D87A622185CD100F1C02B /* Frameworks */,
+				C33D87A722185CD100F1C02B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C33D87AB22185CD100F1C02B /* PBXTargetDependency */,
+			);
+			name = RDiddysPaintStudioUITests;
+			productName = RDiddysPaintStudioUITests;
+			productReference = C33D87A922185CD100F1C02B /* RDiddysPaintStudioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C33D878222185CCE00F1C02B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Rohit Didwania";
+				TargetAttributes = {
+					C33D878922185CCE00F1C02B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					C33D879D22185CD000F1C02B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C33D878922185CCE00F1C02B;
+					};
+					C33D87A822185CD100F1C02B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C33D878922185CCE00F1C02B;
+					};
+				};
+			};
+			buildConfigurationList = C33D878522185CCE00F1C02B /* Build configuration list for PBXProject "RDiddysPaintStudio" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C33D878122185CCE00F1C02B;
+			productRefGroup = C33D878B22185CCE00F1C02B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C33D878922185CCE00F1C02B /* RDiddysPaintStudio */,
+				C33D879D22185CD000F1C02B /* RDiddysPaintStudioTests */,
+				C33D87A822185CD100F1C02B /* RDiddysPaintStudioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C33D878822185CCE00F1C02B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C33D879822185CD000F1C02B /* LaunchScreen.storyboard in Resources */,
+				C33D879522185CD000F1C02B /* Assets.xcassets in Resources */,
+				C33D879322185CCE00F1C02B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C33D879C22185CD000F1C02B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C33D87A722185CD100F1C02B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C33D878622185CCE00F1C02B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C33D879022185CCE00F1C02B /* ViewController.swift in Sources */,
+				C33D878E22185CCE00F1C02B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C33D879A22185CD000F1C02B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C33D87A322185CD000F1C02B /* RDiddysPaintStudioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C33D87A522185CD100F1C02B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C33D87AE22185CD100F1C02B /* RDiddysPaintStudioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C33D87A022185CD000F1C02B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C33D878922185CCE00F1C02B /* RDiddysPaintStudio */;
+			targetProxy = C33D879F22185CD000F1C02B /* PBXContainerItemProxy */;
+		};
+		C33D87AB22185CD100F1C02B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C33D878922185CCE00F1C02B /* RDiddysPaintStudio */;
+			targetProxy = C33D87AA22185CD100F1C02B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C33D879122185CCE00F1C02B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C33D879222185CCE00F1C02B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C33D879622185CD000F1C02B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C33D879722185CD000F1C02B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C33D87B022185CD100F1C02B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C33D87B122185CD100F1C02B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C33D87B322185CD100F1C02B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RDiddysPaintStudio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RDiddyEnterprise.RDiddysPaintStudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C33D87B422185CD100F1C02B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RDiddysPaintStudio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RDiddyEnterprise.RDiddysPaintStudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C33D87B622185CD100F1C02B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RDiddysPaintStudioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RDiddyEnterprise.RDiddysPaintStudioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RDiddysPaintStudio.app/RDiddysPaintStudio";
+			};
+			name = Debug;
+		};
+		C33D87B722185CD100F1C02B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RDiddysPaintStudioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RDiddyEnterprise.RDiddysPaintStudioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RDiddysPaintStudio.app/RDiddysPaintStudio";
+			};
+			name = Release;
+		};
+		C33D87B922185CD100F1C02B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RDiddysPaintStudioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RDiddyEnterprise.RDiddysPaintStudioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RDiddysPaintStudio;
+			};
+			name = Debug;
+		};
+		C33D87BA22185CD100F1C02B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RDiddysPaintStudioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RDiddyEnterprise.RDiddysPaintStudioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RDiddysPaintStudio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C33D878522185CCE00F1C02B /* Build configuration list for PBXProject "RDiddysPaintStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C33D87B022185CD100F1C02B /* Debug */,
+				C33D87B122185CD100F1C02B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C33D87B222185CD100F1C02B /* Build configuration list for PBXNativeTarget "RDiddysPaintStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C33D87B322185CD100F1C02B /* Debug */,
+				C33D87B422185CD100F1C02B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C33D87B522185CD100F1C02B /* Build configuration list for PBXNativeTarget "RDiddysPaintStudioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C33D87B622185CD100F1C02B /* Debug */,
+				C33D87B722185CD100F1C02B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C33D87B822185CD100F1C02B /* Build configuration list for PBXNativeTarget "RDiddysPaintStudioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C33D87B922185CD100F1C02B /* Debug */,
+				C33D87BA22185CD100F1C02B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C33D878222185CCE00F1C02B /* Project object */;
+}
