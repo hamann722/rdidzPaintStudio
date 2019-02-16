@@ -44,6 +44,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.sheet.penWidth = CGFloat.init(currentPenSize)
     }
     
+    @IBAction func clearSheet(){
+        sheet.lines = []
+        sheet.setNeedsDisplay()
+    }
+    
     fileprivate func newSheet(){
         self.sheet.backgroundColor = UIColor.init(r: 50, g: 50, b: 50)
         self.sheet.frame = self.guideView.frame

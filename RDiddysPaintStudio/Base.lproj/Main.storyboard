@@ -32,6 +32,9 @@
                                             <constraint firstAttribute="height" constant="30" id="yEX-3q-WWw"/>
                                         </constraints>
                                         <state key="normal" image="bluetrash"/>
+                                        <connections>
+                                            <action selector="clearSheet" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUu-lE-O09"/>
+                                        </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QqP-bq-CZ6">
                                         <rect key="frame" x="105" y="18" width="0.0" height="69.666666666666671"/>
