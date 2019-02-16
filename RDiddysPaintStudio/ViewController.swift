@@ -41,7 +41,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func sliderChanged(_ sender: UISlider) {
         let currentPenSize = (sender.value) * 10
-        self.sheet.penWidth = CGFloat.init(currentPenSize)
+        sheet.penWidth = CGFloat.init(currentPenSize)
+        sheet.setNeedsDisplay()
     }
     
     @IBAction func clearSheet(){
@@ -85,7 +86,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let color = self.colors[indexPath.row].cgColor
-        self.sheet.currentColor = color
+        sheet.currentColor = color
+        sheet.setNeedsDisplay()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
