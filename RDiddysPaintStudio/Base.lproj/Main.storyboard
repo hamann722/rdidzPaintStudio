@@ -79,13 +79,21 @@
                                     <constraint firstAttribute="trailing" secondItem="QqP-bq-CZ6" secondAttribute="trailing" priority="999" constant="18" id="yfz-Ua-s7F"/>
                                 </constraints>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DNV-ia-omo">
+                                <rect key="frame" x="-47" y="485.5" width="134" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="xSP-3a-6ih"/>
+                                </constraints>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.20392156862745098" green="0.47450980392156861" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="VSZ-ei-jro" firstAttribute="top" secondItem="DNV-ia-omo" secondAttribute="bottom" constant="65" id="JDX-9J-Lsy"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Jwz-QC-duP"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.13" id="X6C-53-s2V"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="u2E-2C-gpr"/>
+                            <constraint firstItem="DNV-ia-omo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-45" id="vzt-VE-6MB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VSZ-ei-jro" secondAttribute="bottom" id="w0P-vn-cNz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -93,6 +101,7 @@
                     <connections>
                         <outlet property="colorCollectionView" destination="QqP-bq-CZ6" id="XdI-Em-OW6"/>
                         <outlet property="colorCollectionViewConstraint" destination="WJM-e8-y4x" id="PAd-UM-f8d"/>
+                        <outlet property="verticalSlider" destination="DNV-ia-omo" id="lTy-1V-Sce"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

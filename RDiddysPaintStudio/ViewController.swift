@@ -15,7 +15,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet var colorCollectionViewConstraint : NSLayoutConstraint!
     @IBOutlet weak var colorCollectionView : UICollectionView!
-
+    @IBOutlet weak var verticalSlider: UISlider!{
+        didSet{
+            verticalSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpColorCollectionView()
