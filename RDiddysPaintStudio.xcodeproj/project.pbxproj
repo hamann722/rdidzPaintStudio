@@ -14,6 +14,8 @@
 		C33D879822185CD000F1C02B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33D879622185CD000F1C02B /* LaunchScreen.storyboard */; };
 		C33D87A322185CD000F1C02B /* RDiddysPaintStudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D87A222185CD000F1C02B /* RDiddysPaintStudioTests.swift */; };
 		C33D87AE22185CD100F1C02B /* RDiddysPaintStudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D87AD22185CD100F1C02B /* RDiddysPaintStudioUITests.swift */; };
+		C33D87BC22185D4200F1C02B /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D87BB22185D4200F1C02B /* SheetView.swift */; };
+		C33D87C02218884200F1C02B /* ColorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33D87BF2218884200F1C02B /* ColorViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C33D87A922185CD100F1C02B /* RDiddysPaintStudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RDiddysPaintStudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33D87AD22185CD100F1C02B /* RDiddysPaintStudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDiddysPaintStudioUITests.swift; sourceTree = "<group>"; };
 		C33D87AF22185CD100F1C02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C33D87BB22185D4200F1C02B /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		C33D87BF2218884200F1C02B /* ColorViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				C33D879422185CD000F1C02B /* Assets.xcassets */,
 				C33D879622185CD000F1C02B /* LaunchScreen.storyboard */,
 				C33D879922185CD000F1C02B /* Info.plist */,
+				C33D87BB22185D4200F1C02B /* SheetView.swift */,
+				C33D87BF2218884200F1C02B /* ColorViewCell.xib */,
 			);
 			path = RDiddysPaintStudio;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33D87C02218884200F1C02B /* ColorViewCell.xib in Resources */,
 				C33D879822185CD000F1C02B /* LaunchScreen.storyboard in Resources */,
 				C33D879522185CD000F1C02B /* Assets.xcassets in Resources */,
 				C33D879322185CCE00F1C02B /* Main.storyboard in Resources */,
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33D879022185CCE00F1C02B /* ViewController.swift in Sources */,
+				C33D87BC22185D4200F1C02B /* SheetView.swift in Sources */,
 				C33D878E22185CCE00F1C02B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TR3UQ4U5A;
 				INFOPLIST_FILE = RDiddysPaintStudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7TR3UQ4U5A;
 				INFOPLIST_FILE = RDiddysPaintStudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

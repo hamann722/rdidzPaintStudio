@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colorCell" id="0C1-2S-naW" customClass="ColorCell" customModule="RDiddysPaintStudio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of5-Qc-HDD">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Of5-Qc-HDD" firstAttribute="height" secondItem="0C1-2S-naW" secondAttribute="height" id="1TG-SO-Z2W"/>
+                <constraint firstItem="Of5-Qc-HDD" firstAttribute="centerY" secondItem="lna-yB-uwD" secondAttribute="centerY" id="Slt-9X-ynl"/>
+                <constraint firstItem="Of5-Qc-HDD" firstAttribute="centerX" secondItem="lna-yB-uwD" secondAttribute="centerX" id="a62-kE-FCB"/>
+                <constraint firstItem="Of5-Qc-HDD" firstAttribute="width" secondItem="0C1-2S-naW" secondAttribute="width" id="rZx-NG-Coh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="lna-yB-uwD"/>
+            <connections>
+                <outlet property="colorView" destination="Of5-Qc-HDD" id="5ze-mW-Pay"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="112"/>
+        </collectionViewCell>
+    </objects>
+</document>
