@@ -31,6 +31,7 @@
                                             <constraint firstAttribute="width" constant="30" id="TAH-9Z-zDj"/>
                                             <constraint firstAttribute="height" constant="30" id="yEX-3q-WWw"/>
                                         </constraints>
+                                        <color key="tintColor" red="0.20392156862745098" green="0.47450980392156861" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" image="bluetrash"/>
                                         <connections>
                                             <action selector="clearSheet" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUu-lE-O09"/>
@@ -116,6 +117,7 @@
                         <outlet property="colorCollectionView" destination="QqP-bq-CZ6" id="XdI-Em-OW6"/>
                         <outlet property="colorCollectionViewConstraint" destination="WJM-e8-y4x" id="PAd-UM-f8d"/>
                         <outlet property="guideView" destination="GUD-2Q-2hP" id="6Jl-lQ-NtG"/>
+                        <outlet property="pickColorButton" destination="9vF-R5-bB3" id="Vaq-XM-wq3"/>
                         <outlet property="toolView" destination="VSZ-ei-jro" id="MC1-we-emO"/>
                         <outlet property="verticalSlider" destination="DNV-ia-omo" id="lTy-1V-Sce"/>
                     </connections>

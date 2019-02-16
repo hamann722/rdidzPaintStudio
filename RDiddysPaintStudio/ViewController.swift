@@ -16,6 +16,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet var colorCollectionViewConstraint : NSLayoutConstraint!
     @IBOutlet weak var colorCollectionView : UICollectionView!
+    @IBOutlet weak var pickColorButton : UIButton!
     @IBOutlet weak var toolView: UIView!
     @IBOutlet weak var guideView: UIView!
     
@@ -36,7 +37,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func openPicker(){
         self.openPicker(open: self.colorCollectionViewConstraint.isActive)
+        self.colorCollectionViewConstraint.isActive ? (self.pickColorButton.setImage(UIImage.init(named: "paintpallete"), for: .normal)) : (self.pickColorButton.setImage(UIImage.init(named: "filledInPallet"), for: .normal))
+        UIView.animate(withDuration: self.animationDuration) {
+            self.colorCollectionViewConstraint.isActive ? (self.pickColorButton.transform = CGAffineTransform.identity) : (self.pickColorButton.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3))
+        }
+
         setUpColorCollectionView()
+        
+
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
