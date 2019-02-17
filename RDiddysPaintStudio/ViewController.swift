@@ -17,12 +17,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet var colorCollectionViewConstraint : NSLayoutConstraint!
     @IBOutlet var toolViewConstraint : NSLayoutConstraint!
     @IBOutlet var segControlConstraint : NSLayoutConstraint!
+    @IBOutlet var mapViewConstraint : NSLayoutConstraint!
     @IBOutlet weak var colorCollectionView : UICollectionView!
     @IBOutlet weak var pickColorButton : UIButton!
     @IBOutlet weak var toolView: UIView!
+    @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var dashedLineSegControl: UISegmentedControl!
-    
     @IBOutlet weak var dragToDrawLabel: UILabel!
+    
     @IBOutlet weak var verticalSlider: UISlider!{
         didSet{
             verticalSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
@@ -32,7 +34,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         setUpColorCollectionView()
         newSheet()
-        setUpSegControl()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,10 +70,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         sheet.setNeedsDisplay()
     }
     
-    fileprivate func setUpSegControl(){
-        self.view.bringSubviewToFront(self.dashedLineSegControl)
-    }
-    
     @IBAction func clearSheet(){
         if self.sheet.lines.count > 0 {
             let deleteAlert = UIAlertController.init(title: "Are you sure you want to delete your hard work?", message: "This cannot be reversed later", preferredStyle: .alert)
@@ -105,12 +102,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    @IBAction func toggleMapView(){
+        self.mapViewConstraint.isActive = !self.mapViewConstraint.isActive
+        UIView.animate(withDuration: self.animationDuration) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
     fileprivate func newSheet(){
         self.sheet.backgroundColor = UIColor.init(r: 50, g: 50, b: 50)
         self.sheet.frame = self.view.frame
         self.view.addSubview(sheet)
         sheet.delegate = self
-        [self.verticalSlider, self.toolView, self.dragToDrawLabel].forEach { (view) in
+        [self.verticalSlider, self.toolView, self.dragToDrawLabel, self.dashedLineSegControl, self.mapView].forEach { (view) in
             self.view.bringSubviewToFront(view)
         }
         self.view.layoutIfNeeded()
