@@ -18,10 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUD-2Q-2hP">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSZ-ei-jro">
                                 <rect key="frame" x="0.0" y="778" width="375" height="105.66666666666663"/>
                                 <subviews>
@@ -100,14 +96,10 @@
                         <color key="backgroundColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.20392156862745098" green="0.47450980392156861" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="GUD-2Q-2hP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="49h-Zc-W4p"/>
-                            <constraint firstItem="GUD-2Q-2hP" firstAttribute="bottom" secondItem="VSZ-ei-jro" secondAttribute="top" id="5a6-nl-IZb"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="top" secondItem="DNV-ia-omo" secondAttribute="bottom" constant="65" id="JDX-9J-Lsy"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Jwz-QC-duP"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="R2w-Dh-yfo"/>
-                            <constraint firstItem="GUD-2Q-2hP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RDF-9u-Y1c"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.13" id="X6C-53-s2V"/>
-                            <constraint firstItem="GUD-2Q-2hP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="kT3-za-3sw"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="u2E-2C-gpr"/>
                             <constraint firstItem="DNV-ia-omo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-45" id="vzt-VE-6MB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VSZ-ei-jro" secondAttribute="bottom" priority="999" id="w0P-vn-cNz"/>
@@ -117,7 +109,6 @@
                     <connections>
                         <outlet property="colorCollectionView" destination="QqP-bq-CZ6" id="XdI-Em-OW6"/>
                         <outlet property="colorCollectionViewConstraint" destination="WJM-e8-y4x" id="PAd-UM-f8d"/>
-                        <outlet property="guideView" destination="GUD-2Q-2hP" id="6Jl-lQ-NtG"/>
                         <outlet property="pickColorButton" destination="9vF-R5-bB3" id="Vaq-XM-wq3"/>
                         <outlet property="toolView" destination="VSZ-ei-jro" id="MC1-we-emO"/>
                         <outlet property="toolViewConstraint" destination="R2w-Dh-yfo" id="qDV-d5-iv2"/>

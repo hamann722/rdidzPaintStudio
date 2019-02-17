@@ -32,6 +32,7 @@ class SheetView : UIView {
             context.setStrokeColor(line.color)
             context.setLineWidth(CGFloat(line.strokeWidth))
             context.setLineCap(.round)
+            
             for (i, p) in line.points.enumerated() {
                 if i == 0 {
                     context.move(to: p)
@@ -61,6 +62,7 @@ class SheetView : UIView {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         delegate?.toggleTools(hide: false)
     }
+    
     
 }
 

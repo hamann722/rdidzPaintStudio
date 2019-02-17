@@ -19,7 +19,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var colorCollectionView : UICollectionView!
     @IBOutlet weak var pickColorButton : UIButton!
     @IBOutlet weak var toolView: UIView!
-    @IBOutlet weak var guideView: UIView!
     
     @IBOutlet weak var verticalSlider: UISlider!{
         didSet{
@@ -85,7 +84,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     fileprivate func newSheet(){
         self.sheet.backgroundColor = UIColor.init(r: 50, g: 50, b: 50)
-        self.sheet.frame = self.guideView.frame
+        self.sheet.frame = self.view.frame
         self.view.addSubview(sheet)
         sheet.delegate = self
         self.view.bringSubviewToFront(self.verticalSlider)
