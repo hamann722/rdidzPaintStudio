@@ -55,7 +55,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func clearSheet(){
         if self.sheet.lines.count > 0 {
-            let deleteAlert = UIAlertController.init(title: "Are you sure you want to delete your hard work?", message: "This can not be reversed later", preferredStyle: .alert)
+            let deleteAlert = UIAlertController.init(title: "Are you sure you want to delete your hard work?", message: "This cannot be reversed later", preferredStyle: .alert)
             deleteAlert.addAction(UIAlertAction.init(title: "Delete", style: .destructive, handler: { (_) in
                 self.sheet.lines = []
                 self.sheet.setNeedsDisplay()
