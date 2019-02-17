@@ -21,6 +21,8 @@ class SheetView : UIView {
     var penWidth : CGFloat = 1.0
     var lines = [Line]()
     var delegate : SheetDelegate?
+    var dashMode : Bool = false
+    
     
     override func draw(_ rect: CGRect) {
       
@@ -37,9 +39,11 @@ class SheetView : UIView {
                 if i == 0 {
                     context.move(to: p)
                 } else {
+                    dashMode ? (context.setLineDash(phase: 3, lengths: [50, 20])) : ()
                     context.addLine(to: p)
                 }
             }
+
             context.strokePath()
         }
         
@@ -47,6 +51,7 @@ class SheetView : UIView {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         self.lines.append(Line.init(strokeWidth: Float(self.penWidth), color: self.currentColor ?? UIColor.white.cgColor, points: []))
     }
     

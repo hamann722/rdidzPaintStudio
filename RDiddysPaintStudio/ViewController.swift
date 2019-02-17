@@ -16,9 +16,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet var colorCollectionViewConstraint : NSLayoutConstraint!
     @IBOutlet var toolViewConstraint : NSLayoutConstraint!
+    @IBOutlet var segControlConstraint : NSLayoutConstraint!
     @IBOutlet weak var colorCollectionView : UICollectionView!
     @IBOutlet weak var pickColorButton : UIButton!
     @IBOutlet weak var toolView: UIView!
+    @IBOutlet weak var dashedLineSegControl: UISegmentedControl!
     
     @IBOutlet weak var verticalSlider: UISlider!{
         didSet{
@@ -29,6 +31,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         setUpColorCollectionView()
         newSheet()
+        setUpSegControl()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +54,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let currentPenSize = (sender.value) * 10
         sheet.penWidth = CGFloat.init(currentPenSize)
         sheet.setNeedsDisplay()
+    }
+    
+    @IBAction func segmentedControllerChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.sheet.dashMode = false
+        case 1:
+            self.sheet.dashMode = true
+        default:
+            self.sheet.dashMode = false
+        }
+        sheet.setNeedsDisplay()
+    }
+    
+    fileprivate func setUpSegControl(){
+        self.view.bringSubviewToFront(self.dashedLineSegControl)
     }
     
     @IBAction func clearSheet(){
@@ -77,6 +96,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func toggleTools(hide: Bool) {
         animateHide(self.verticalSlider, hide: hide)
         self.toolViewConstraint.isActive = hide
+        self.segControlConstraint.isActive = hide
         UIView.animate(withDuration: self.animationDuration) {
             self.view.layoutIfNeeded()
         }
