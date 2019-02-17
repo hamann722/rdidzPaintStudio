@@ -103,6 +103,12 @@
                                     <action selector="segmentedControllerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GZw-Gj-HY8"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag anywhere to start drawing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmk-r6-NEZ">
+                                <rect key="frame" x="64" y="364.66666666666669" width="247" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.20392156862745098" green="0.47450980392156861" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -114,6 +120,8 @@
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="R2w-Dh-yfo"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.13" id="X6C-53-s2V"/>
                             <constraint firstItem="qhI-zF-Row" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cu9-Lf-Liy"/>
+                            <constraint firstItem="cmk-r6-NEZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-36" id="h5L-LY-9n6"/>
+                            <constraint firstItem="cmk-r6-NEZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jxE-E7-Gt3"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="u2E-2C-gpr"/>
                             <constraint firstItem="DNV-ia-omo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-45" id="vzt-VE-6MB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VSZ-ei-jro" secondAttribute="bottom" priority="999" id="w0P-vn-cNz"/>
@@ -124,6 +132,7 @@
                         <outlet property="colorCollectionView" destination="QqP-bq-CZ6" id="XdI-Em-OW6"/>
                         <outlet property="colorCollectionViewConstraint" destination="WJM-e8-y4x" id="PAd-UM-f8d"/>
                         <outlet property="dashedLineSegControl" destination="qhI-zF-Row" id="a6J-3B-TdV"/>
+                        <outlet property="dragToDrawLabel" destination="cmk-r6-NEZ" id="IDC-5P-HAB"/>
                         <outlet property="pickColorButton" destination="9vF-R5-bB3" id="Vaq-XM-wq3"/>
                         <outlet property="segControlConstraint" destination="cu9-Lf-Liy" id="cZr-7G-RQW"/>
                         <outlet property="toolView" destination="VSZ-ei-jro" id="MC1-we-emO"/>

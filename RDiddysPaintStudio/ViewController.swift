@@ -22,6 +22,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var toolView: UIView!
     @IBOutlet weak var dashedLineSegControl: UISegmentedControl!
     
+    @IBOutlet weak var dragToDrawLabel: UILabel!
     @IBOutlet weak var verticalSlider: UISlider!{
         didSet{
             verticalSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
@@ -77,6 +78,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let deleteAlert = UIAlertController.init(title: "Are you sure you want to delete your hard work?", message: "This cannot be reversed later", preferredStyle: .alert)
             deleteAlert.addAction(UIAlertAction.init(title: "Delete", style: .destructive, handler: { (_) in
                 self.sheet.lines = []
+                self.animateHide(self.dragToDrawLabel, hide: self.sheet.lines.count > 0)
                 self.sheet.setNeedsDisplay()
             }))
             deleteAlert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
@@ -94,6 +96,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func toggleTools(hide: Bool) {
+        self.animateHide(self.dragToDrawLabel, hide: self.sheet.lines.count > 0)
         animateHide(self.verticalSlider, hide: hide)
         self.toolViewConstraint.isActive = hide
         self.segControlConstraint.isActive = hide
@@ -107,8 +110,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.sheet.frame = self.view.frame
         self.view.addSubview(sheet)
         sheet.delegate = self
-        self.view.bringSubviewToFront(self.verticalSlider)
-        self.view.bringSubviewToFront(self.toolView)
+        [self.verticalSlider, self.toolView, self.dragToDrawLabel].forEach { (view) in
+            self.view.bringSubviewToFront(view)
+        }
         self.view.layoutIfNeeded()
         self.toggleTools(hide: false)
     }
