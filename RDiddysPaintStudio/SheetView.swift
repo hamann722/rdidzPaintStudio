@@ -17,9 +17,10 @@ struct Line {
 
 class SheetView : UIView {
     
-    var currentColor : CGColor? = nil   
+    var currentColor : CGColor? = nil
     var penWidth : CGFloat = 1.0
     var lines = [Line]()
+    var delegate : SheetDelegate?
     
     override func draw(_ rect: CGRect) {
       
@@ -49,6 +50,7 @@ class SheetView : UIView {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        delegate?.toggleSlider(hide: true)
         guard let point = touches.first?.location(in: nil) else { return }
         guard var lastLine = lines.popLast() else { return }
         lastLine.points.append(point)
@@ -56,4 +58,12 @@ class SheetView : UIView {
         setNeedsDisplay()
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        delegate?.toggleSlider(hide: false)
+    }
+    
+}
+
+protocol SheetDelegate {
+    func toggleSlider(hide : Bool)
 }

@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SheetDelegate {
+   
     let sheet = SheetView()
     private var animationDuration = 0.2
     private var colors = [UIColor.init(r: 0, g: 0, b: 0), UIColor.init(r: 255, g: 255, b: 255), UIColor.init(r: 255, g: 192, b: 203), UIColor.init(r: 0, g: 128, b: 128), UIColor.init(r: 255, g: 228, b: 225), UIColor.init(r: 255, g: 0, b: 0), UIColor.init(r: 255, g: 215, b: 0), UIColor.init(r: 211, g: 255, b: 206), UIColor.init(r: 0, g: 255, b: 255),UIColor.init(r: 64, g: 224, b: 208), UIColor.init(r: 255, g: 115, b: 115), UIColor.init(r: 230, g: 230, b: 250), UIColor.init(r: 0, g: 0, b: 255),UIColor.init(r: 240, g: 248, b: 255), UIColor.init(r: 255, g: 165, b: 0), UIColor.init(r: 176, g: 224, b: 230), UIColor.init(r: 238, g: 238, b: 238), UIColor.init(r: 204, g: 204, b: 204), UIColor.init(r: 127, g: 255, b: 212), UIColor.init(r: 51, g: 51, b: 51), UIColor.init(r: 192, g: 192, b: 192), UIColor.init(r: 0, g: 51, b: 102),UIColor.init(r: 128, g: 0, b: 128),UIColor.init(r: 128, g: 0, b: 0), UIColor.init(r: 102, g: 205, b: 170), UIColor.init(r: 25, g: 25, b: 112), UIColor.init(r: 204, g: 255, b: 0), UIColor.init(r: 51, g: 153, b: 255), UIColor.init(r: 255, g: 127, b: 80), UIColor.init(r: 246, g: 84, b: 106)]
@@ -66,10 +66,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        
     }
     
+    @objc func animateHide(_ view : UIView, hide : Bool){
+        view.isHidden = hide
+        let alpha = hide ? 0 : 1
+        UIView.animate(withDuration: 0.2) {
+            view.alpha = CGFloat(alpha)
+        }
+    }
+    
+    func toggleSlider(hide: Bool) {
+        animateHide(self.verticalSlider, hide: hide)
+    }
+    
     fileprivate func newSheet(){
         self.sheet.backgroundColor = UIColor.init(r: 50, g: 50, b: 50)
         self.sheet.frame = self.guideView.frame
         self.view.addSubview(sheet)
+        sheet.delegate = self
         self.view.bringSubviewToFront(self.verticalSlider)
         self.view.layoutIfNeeded()  
     }
