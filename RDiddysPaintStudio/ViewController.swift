@@ -15,6 +15,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     private var colors = [UIColor.init(r: 0, g: 0, b: 0), UIColor.init(r: 255, g: 255, b: 255), UIColor.init(r: 255, g: 192, b: 203), UIColor.init(r: 0, g: 128, b: 128), UIColor.init(r: 255, g: 228, b: 225), UIColor.init(r: 255, g: 0, b: 0), UIColor.init(r: 255, g: 215, b: 0), UIColor.init(r: 211, g: 255, b: 206), UIColor.init(r: 0, g: 255, b: 255),UIColor.init(r: 64, g: 224, b: 208), UIColor.init(r: 255, g: 115, b: 115), UIColor.init(r: 230, g: 230, b: 250), UIColor.init(r: 0, g: 0, b: 255),UIColor.init(r: 240, g: 248, b: 255), UIColor.init(r: 255, g: 165, b: 0), UIColor.init(r: 176, g: 224, b: 230), UIColor.init(r: 238, g: 238, b: 238), UIColor.init(r: 204, g: 204, b: 204), UIColor.init(r: 127, g: 255, b: 212), UIColor.init(r: 51, g: 51, b: 51), UIColor.init(r: 192, g: 192, b: 192), UIColor.init(r: 0, g: 51, b: 102),UIColor.init(r: 128, g: 0, b: 128),UIColor.init(r: 128, g: 0, b: 0), UIColor.init(r: 102, g: 205, b: 170), UIColor.init(r: 25, g: 25, b: 112), UIColor.init(r: 204, g: 255, b: 0), UIColor.init(r: 51, g: 153, b: 255), UIColor.init(r: 255, g: 127, b: 80), UIColor.init(r: 246, g: 84, b: 106)]
 
     @IBOutlet var colorCollectionViewConstraint : NSLayoutConstraint!
+    @IBOutlet var toolViewConstraint : NSLayoutConstraint!
     @IBOutlet weak var colorCollectionView : UICollectionView!
     @IBOutlet weak var pickColorButton : UIButton!
     @IBOutlet weak var toolView: UIView!
@@ -74,8 +75,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    func toggleSlider(hide: Bool) {
+    func toggleTools(hide: Bool) {
         animateHide(self.verticalSlider, hide: hide)
+        self.toolViewConstraint.isActive = hide
+        UIView.animate(withDuration: self.animationDuration) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     fileprivate func newSheet(){
@@ -84,7 +89,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.view.addSubview(sheet)
         sheet.delegate = self
         self.view.bringSubviewToFront(self.verticalSlider)
-        self.view.layoutIfNeeded()  
+        self.view.bringSubviewToFront(self.toolView)
+        self.view.layoutIfNeeded()
+        self.toggleTools(hide: false)
     }
     
     fileprivate func openPicker(open : Bool){

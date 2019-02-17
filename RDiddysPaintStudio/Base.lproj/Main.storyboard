@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUD-2Q-2hP">
-                                <rect key="frame" x="0.0" y="44" width="375" height="628.33333333333337"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSZ-ei-jro">
-                                <rect key="frame" x="0.0" y="672.33333333333337" width="375" height="105.66666666666663"/>
+                                <rect key="frame" x="0.0" y="778" width="375" height="105.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmL-yJ-DFg">
-                                        <rect key="frame" x="18" y="38" width="30" height="30"/>
+                                        <rect key="frame" x="18" y="37.666666666666629" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="TAH-9Z-zDj"/>
                                             <constraint firstAttribute="height" constant="30" id="yEX-3q-WWw"/>
@@ -66,7 +66,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vF-R5-bB3">
-                                        <rect key="frame" x="66" y="38" width="30" height="30"/>
+                                        <rect key="frame" x="66" y="37.666666666666629" width="30" height="30"/>
                                         <state key="normal" image="paintpallete"/>
                                         <connections>
                                             <action selector="openPicker" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hp-nz-fV8"/>
@@ -88,7 +88,7 @@
                                 </constraints>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.10000000000000001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DNV-ia-omo">
-                                <rect key="frame" x="-47" y="577.33333333333337" width="134" height="31"/>
+                                <rect key="frame" x="-47" y="683" width="134" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="xSP-3a-6ih"/>
                                 </constraints>
@@ -104,12 +104,13 @@
                             <constraint firstItem="GUD-2Q-2hP" firstAttribute="bottom" secondItem="VSZ-ei-jro" secondAttribute="top" id="5a6-nl-IZb"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="top" secondItem="DNV-ia-omo" secondAttribute="bottom" constant="65" id="JDX-9J-Lsy"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Jwz-QC-duP"/>
+                            <constraint firstItem="VSZ-ei-jro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="R2w-Dh-yfo"/>
                             <constraint firstItem="GUD-2Q-2hP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RDF-9u-Y1c"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.13" id="X6C-53-s2V"/>
                             <constraint firstItem="GUD-2Q-2hP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="kT3-za-3sw"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="u2E-2C-gpr"/>
                             <constraint firstItem="DNV-ia-omo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-45" id="vzt-VE-6MB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VSZ-ei-jro" secondAttribute="bottom" id="w0P-vn-cNz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VSZ-ei-jro" secondAttribute="bottom" priority="999" id="w0P-vn-cNz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -119,6 +120,7 @@
                         <outlet property="guideView" destination="GUD-2Q-2hP" id="6Jl-lQ-NtG"/>
                         <outlet property="pickColorButton" destination="9vF-R5-bB3" id="Vaq-XM-wq3"/>
                         <outlet property="toolView" destination="VSZ-ei-jro" id="MC1-we-emO"/>
+                        <outlet property="toolViewConstraint" destination="R2w-Dh-yfo" id="qDV-d5-iv2"/>
                         <outlet property="verticalSlider" destination="DNV-ia-omo" id="lTy-1V-Sce"/>
                     </connections>
                 </viewController>

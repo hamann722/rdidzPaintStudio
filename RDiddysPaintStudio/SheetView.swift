@@ -50,7 +50,7 @@ class SheetView : UIView {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.toggleSlider(hide: true)
+        delegate?.toggleTools(hide: true)
         guard let point = touches.first?.location(in: nil) else { return }
         guard var lastLine = lines.popLast() else { return }
         lastLine.points.append(point)
@@ -59,11 +59,11 @@ class SheetView : UIView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.toggleSlider(hide: false)
+        delegate?.toggleTools(hide: false)
     }
     
 }
 
 protocol SheetDelegate {
-    func toggleSlider(hide : Bool)
+    func toggleTools(hide : Bool)
 }
