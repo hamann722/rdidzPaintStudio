@@ -70,7 +70,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @objc func animateHide(_ view : UIView, hide : Bool){
         view.isHidden = hide
         let alpha = hide ? 0 : 1
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: self.animationDuration) {
             view.alpha = CGFloat(alpha)
         }
     }
