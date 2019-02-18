@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SheetDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SheetDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
    
     let sheet = SheetView()
     private var animationDuration = 0.2
@@ -25,9 +27,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var locationButton : UIButton!
     @IBOutlet weak var toolView: UIView!
     @IBOutlet weak var mapView: UIView!
+    @IBOutlet weak var map : MKMapView!
+    
     @IBOutlet weak var dashedLineSegControl: UISegmentedControl!
     @IBOutlet weak var dragToDrawLabel: UILabel!
     
+    var locationManager: CLLocationManager!
     var stayDown = false
     
     @IBOutlet weak var verticalSlider: UISlider!{
@@ -39,6 +44,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         setUpColorCollectionView()
         newSheet()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -118,11 +124,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     fileprivate func flipHideToolsButton(){
         UIView.animate(withDuration: self.animationDuration) {
             self.hideToolsButton.transform = self.toolViewConstraint.isActive ? ( CGAffineTransform(rotationAngle: .pi)) : (CGAffineTransform.identity)
-//
         }
     }
     
     @IBAction func toggleMapView(){
+        setUpMap()
         self.mapViewConstraint.isActive = !self.mapViewConstraint.isActive
         UIView.animate(withDuration: self.animationDuration) {
             self.view.layoutIfNeeded()
@@ -148,6 +154,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         UIView.animate(withDuration: self.animationDuration) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    fileprivate func setUpMap(){
+        self.map.delegate = self
+
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+        
+        map.isZoomEnabled = true
+        map.isScrollEnabled = true
     }
     
     fileprivate func setUpColorCollectionView(){
@@ -185,6 +208,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 5.0
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        
+        self.map.mapType = MKMapType.standard
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: locValue, span: span)
+        self.map.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = locValue
+        annotation.title = "Region Drawing"
+        annotation.subtitle = "Current Location"
+        self.map.addAnnotation(annotation)
+
     }
 
 }
