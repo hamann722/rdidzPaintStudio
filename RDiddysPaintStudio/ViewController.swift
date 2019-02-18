@@ -21,11 +21,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   
     @IBOutlet weak var colorCollectionView : UICollectionView!
     @IBOutlet weak var pickColorButton : UIButton!
+    @IBOutlet weak var hideToolsButton: UIButton!
     @IBOutlet weak var locationButton : UIButton!
     @IBOutlet weak var toolView: UIView!
     @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var dashedLineSegControl: UISegmentedControl!
     @IBOutlet weak var dragToDrawLabel: UILabel!
+    
+    var stayDown = false
     
     @IBOutlet weak var verticalSlider: UISlider!{
         didSet{
@@ -97,10 +100,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func toggleTools(hide: Bool) {
         self.animateHide(self.dragToDrawLabel, hide: self.sheet.lines.count > 0)
         animateHide(self.verticalSlider, hide: hide)
-        self.toolViewConstraint.isActive = hide
+        if !stayDown { self.toolViewConstraint.isActive = hide ; flipHideToolsButton() }
         self.segControlConstraint.isActive = hide
         UIView.animate(withDuration: self.animationDuration) {
             self.view.layoutIfNeeded()
+        }
+    }
+    @IBAction func stowAwayTools(_ sender: Any) {
+        self.toolViewConstraint.isActive = !self.toolViewConstraint.isActive
+        self.stayDown = self.toolViewConstraint.isActive ? (true) : (false)
+        UIView.animate(withDuration: self.animationDuration) {
+            self.view.layoutIfNeeded()
+        }
+        flipHideToolsButton()
+    }
+    
+    fileprivate func flipHideToolsButton(){
+        UIView.animate(withDuration: self.animationDuration) {
+            self.hideToolsButton.transform = self.toolViewConstraint.isActive ? ( CGAffineTransform(rotationAngle: .pi)) : (CGAffineTransform.identity)
+//
         }
     }
     
@@ -116,7 +134,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.sheet.frame = self.view.frame
         self.view.addSubview(sheet)
         sheet.delegate = self
-        [self.verticalSlider, self.toolView, self.dragToDrawLabel, self.dashedLineSegControl, self.mapView].forEach { (view) in
+        [self.verticalSlider, self.toolView, self.dragToDrawLabel, self.dashedLineSegControl, self.hideToolsButton ,self.mapView].forEach { (view) in
             self.view.bringSubviewToFront(view)
         }
         self.view.layoutIfNeeded()
