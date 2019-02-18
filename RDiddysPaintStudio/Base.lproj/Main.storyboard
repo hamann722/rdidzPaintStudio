@@ -138,14 +138,16 @@
                                 <rect key="frame" x="0.0" y="480" width="320" height="460"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzP-8K-sLX">
-                                        <rect key="frame" x="18" y="18" width="39" height="30"/>
+                                        <rect key="frame" x="18" y="18" width="40" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Close"/>
                                         <connections>
                                             <action selector="toggleMapView" destination="BYZ-38-t0r" eventType="touchUpInside" id="qrm-G9-0bI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQa-UE-wCh">
-                                        <rect key="frame" x="88.5" y="18" width="143" height="30"/>
+                                        <rect key="frame" x="87" y="18" width="146" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Draw Dashed Region"/>
                                     </button>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sNt-x3-U4z">
