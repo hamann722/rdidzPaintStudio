@@ -181,6 +181,7 @@
                         <outlet property="colorCollectionViewConstraint" destination="WJM-e8-y4x" id="PAd-UM-f8d"/>
                         <outlet property="dashedLineSegControl" destination="qhI-zF-Row" id="a6J-3B-TdV"/>
                         <outlet property="dragToDrawLabel" destination="cmk-r6-NEZ" id="IDC-5P-HAB"/>
+                        <outlet property="locationButton" destination="465-Sr-Sgp" id="YXH-bN-rmp"/>
                         <outlet property="mapView" destination="1fk-BF-Zn2" id="u47-ZR-3yN"/>
                         <outlet property="mapViewConstraint" destination="SVt-du-Bq9" id="rvR-E1-7R1"/>
                         <outlet property="pickColorButton" destination="9vF-R5-bB3" id="Vaq-XM-wq3"/>

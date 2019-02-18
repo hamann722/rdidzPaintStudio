@@ -18,8 +18,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet var toolViewConstraint : NSLayoutConstraint!
     @IBOutlet var segControlConstraint : NSLayoutConstraint!
     @IBOutlet var mapViewConstraint : NSLayoutConstraint!
+  
     @IBOutlet weak var colorCollectionView : UICollectionView!
     @IBOutlet weak var pickColorButton : UIButton!
+    @IBOutlet weak var locationButton : UIButton!
     @IBOutlet weak var toolView: UIView!
     @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var dashedLineSegControl: UISegmentedControl!
@@ -46,7 +48,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         UIView.animate(withDuration: self.animationDuration) {
             self.colorCollectionViewConstraint.isActive ? (self.pickColorButton.transform = CGAffineTransform.identity) : (self.pickColorButton.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3))
         }
-
+        self.animateHide(self.locationButton, hide: !self.colorCollectionViewConstraint.isActive)
         setUpColorCollectionView()
         
 
