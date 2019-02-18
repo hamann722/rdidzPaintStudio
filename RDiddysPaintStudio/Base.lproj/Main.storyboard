@@ -97,7 +97,7 @@
                                 </constraints>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.10000000000000001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DNV-ia-omo">
-                                <rect key="frame" x="-47" y="385" width="134" height="31"/>
+                                <rect key="frame" x="-47" y="370" width="134" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="xSP-3a-6ih"/>
                                 </constraints>
@@ -171,7 +171,7 @@
                             <constraint firstItem="1fk-BF-Zn2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="999" id="61g-Id-Q3U"/>
                             <constraint firstItem="1fk-BF-Zn2" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="7aC-jB-bNl"/>
                             <constraint firstItem="qhI-zF-Row" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="999" id="IFa-Qe-bZ8"/>
-                            <constraint firstItem="VSZ-ei-jro" firstAttribute="top" secondItem="DNV-ia-omo" secondAttribute="bottom" constant="65" id="JDX-9J-Lsy"/>
+                            <constraint firstItem="VSZ-ei-jro" firstAttribute="top" secondItem="DNV-ia-omo" secondAttribute="bottom" constant="80" id="JDX-9J-Lsy"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Jwz-QC-duP"/>
                             <constraint firstItem="qhI-zF-Row" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q68-rh-MMZ"/>
                             <constraint firstItem="VSZ-ei-jro" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="R2w-Dh-yfo"/>

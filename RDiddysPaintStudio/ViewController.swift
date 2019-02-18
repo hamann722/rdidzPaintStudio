@@ -139,6 +139,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         self.view.layoutIfNeeded()
         self.toggleTools(hide: false)
+        self.hideToolsButton.addSubtleBottomShadoow()
     }
     
     fileprivate func openPicker(open : Bool){
@@ -218,3 +219,14 @@ extension UIColor {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
 }
+
+extension UIView{
+    @objc func addSubtleBottomShadoow(){
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowRadius = 2.0
+        self.layer.shadowOpacity = 0.25
+        self.layer.shadowOffset = CGSize(width: 0, height: 0.5)
+        self.layer.masksToBounds = false
+    }
+}
+
