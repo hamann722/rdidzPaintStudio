@@ -37,6 +37,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var verticalSlider: UISlider!{
         didSet{
+            //flip it horizontally
             verticalSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
         }
     }
@@ -66,6 +67,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func sliderChanged(_ sender: UISlider) {
         let currentPenSize = (sender.value) * 10
         sheet.penWidth = CGFloat.init(currentPenSize)
+        //update our sheet
         sheet.setNeedsDisplay()
     }
     
@@ -161,6 +163,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         locationManager = CLLocationManager()
         locationManager.delegate = self
+        
+        //ask the manager to request users permission for location tracking
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
 
